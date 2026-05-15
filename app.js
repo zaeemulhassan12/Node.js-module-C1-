@@ -42,10 +42,21 @@ const express = require("express");
 
 const app = express();
 
+
+app.use(function(req, res,next) {
+console.log('Hy i am middleware');
+next();
+});
+app.use(function(req,res,next){
+    console.group('hy i am Second middleware');
+    next();
+})
+
 app.get('/', (req, res) => {
 res.send('Hy its me Zaeem ul hassan first app on node js express framework');
 })
+
 app.get('/profile', (req, res) => {
 res.send('Zaeem Design Pixels');
-})
+});
 app.listen(3000);
