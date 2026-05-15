@@ -18,19 +18,30 @@
 
 //os module load 
 
-var osi = require('os');
+// var osi = require('os');
 
-var TotalMemory  = osi.totalmem();
+// var TotalMemory  = osi.totalmem();
 
-var FreeMemory = osi.freemem();
+// var FreeMemory = osi.freemem();
 
 
-console.log('TotalMemory'+TotalMemory);
-console.log('freeMemory'+FreeMemory);
+// console.log('TotalMemory'+TotalMemory);
+// console.log('freeMemory'+FreeMemory);
 
 //template string 
 //ES6 /ES2015 :ECMAScript 
 
 
-console.log(`ZAEEM UL HASSAN PC Total memory :${TotalMemory}`);
-console.log(`ZAEEM UL HASSAN PC Free Memory :${FreeMemory}`);
+// console.log(`ZAEEM UL HASSAN PC Total memory :${TotalMemory}`);
+// console.log(`ZAEEM UL HASSAN PC Free Memory :${FreeMemory}`);
+
+const figlet = require('figlet');
+
+figlet("Usman ahmad", function (err, data) {
+  if (err) {
+    console.log("Something went wrong...");
+    console.dir(err);
+    return;
+  }
+  console.log(data);
+});
