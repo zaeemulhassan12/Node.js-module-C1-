@@ -35,13 +35,17 @@
 // console.log(`ZAEEM UL HASSAN PC Total memory :${TotalMemory}`);
 // console.log(`ZAEEM UL HASSAN PC Free Memory :${FreeMemory}`);
 
-const figlet = require('figlet');
+// const figlet = require('figlet');
 
-figlet("Usman ahmad", function (err, data) {
-  if (err) {
-    console.log("Something went wrong...");
-    console.dir(err);
-    return;
-  }
-  console.log(data);
-});
+
+const express = require("express");
+
+const app = express();
+
+app.get('/', (req, res) => {
+res.send('Hy its me Zaeem ul hassan first app on node js express framework');
+})
+app.get('/profile', (req, res) => {
+res.send('Zaeem Design Pixels');
+})
+app.listen(3000);
